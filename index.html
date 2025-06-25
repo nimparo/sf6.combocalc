@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title data-i18n="title"></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 data-i18n="title"></h2>
+        <select id="language-select">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+        </select>
+
+        <br><br>
+        <details>
+            <summary data-i18n="ry"></summary>
+            <div data-i18n="DMG"></div>
+            <div data-i18n="DS"></div>
+            <div data-i18n="CS"></div>
+            <div data-i18n="SS"></div>
+            <div data-i18n="IS"></div>
+            <div data-i18n="BD"></div>
+            <div data-i18n="DR"></div>
+            <div data-i18n="PP"></div>
+            <div data-i18n="WS"></div>
+            <div data-i18n="OB"></div>
+        </details>
+            <br>
+        <details open>
+            <summary data-i18n="tips"></summary>
+            <div data-i18n="PC"></div>
+            <div data-i18n="ST"></div>
+            <div data-i18n="MHA"></div>
+            <div data-i18n="MES"></div>
+            <div data-i18n="MES2"></div>
+            <br>
+        </details>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>DMG</th>
+                    <th>DS</th>
+                    <th>CS</th>
+                    <th>SS</th>
+                    <th>IS</th>
+                    <th>BD</th>
+                    <th>DR</th>
+                    <th>PP</th>
+                    <th>WS</th>
+                    <th>OB</th>
+                    <th>SA</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="header-row mobile-only">
+                    <td>DMG</td>
+                    <td>DS</td>
+                    <td>CD</td>
+                    <td>SS</td>
+                    <td>IS</td>
+                    <td>BD</td>
+                    <td>DR</td>
+                    <td>PP</td>
+                    <td>WS</td>
+                    <td>OB</td>
+                    <td>SA</td>
+                    <td>Del</td>
+                </tr>
+            </tbody>
+            <tbody id="input-rows"></tbody>
+        </table>
+
+        <div class="buttons">
+            <button id="add-row" data-i18n="add"></button>
+            <button id="reset" data-i18n="reset"></button>
+        </div>
+
+        <button id="calculate" data-i18n="recal"></button>
+
+        <div id="result">
+            <span data-i18n="result"></span>: <span id="total-damage">0</span>
+        </div>
+    </div>
+
+    <template id="input-template">
+        <tr>
+            <td><input class="dmg" type="number" /></td>
+            <td class="ds">0</td>
+            <td><input class="cs" type="number" /></td>
+            <td><input class="ss" type="number" /></td>
+            <td><input class="is" type="number" /></td>
+            <td><input class="bd" type="number" value="100" /></td>
+            <td><input class="dr" type="checkbox" /></td>
+            <td><input class="pp" type="checkbox" /></td>
+            <td><input class="ws" type="checkbox" /></td>
+            <td><input class="ob" type="checkbox" /></td>
+            <td>
+                <select class="sa">
+                    <option value="X">X</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+            <td><button class="delete">🗑️</button></td>
+        </tr>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
