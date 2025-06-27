@@ -7,7 +7,7 @@ const resultDisplay = document.getElementById('total-damage');
 
 const translations = {
     ja: {
-        title: "コンボダメージ計算機",
+        title: "スト6コンボダメージ計算機",
         ry: "略語",
         tips: "ヒント",
         DMG: "DMG: ダメージ Damage",
@@ -31,7 +31,7 @@ const translations = {
         result: "コンボダメージ"
     },
     en: {
-        title: "Combo Damage Calculator",
+        title: "SF6 Combo Damage Calculator",
         ry: "Abbreviations",
         tips: "Tips",
         DMG: "DMG: ダメージ Damage",
@@ -206,6 +206,7 @@ function resetRows() {
     const row = createRow();
     inputContainer.appendChild(row);
     updateAll();
+    row.querySelector('.dmg').focus();
 
     // SAのdata-prev初期化
     const rows = [...inputContainer.children];
@@ -315,6 +316,7 @@ addBtn.addEventListener('click', () => {
     const row = createRow();
     inputContainer.appendChild(row);
     updateAll();
+    row.querySelector('.dmg').focus();
 });
 
 resetBtn.addEventListener('click', resetRows);
